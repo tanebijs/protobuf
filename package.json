@@ -7,6 +7,7 @@
     "type": "git",
     "url": "git+https://github.com/tanebijs/protobuf.git"
   },
+  "files": ["dist"],
   "main": "dist/index.js",
   "scripts": {
     "build": "tsup",
