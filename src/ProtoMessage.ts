@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { CodedReader } from './CodedReader';
 import { CodedWriter } from './CodedWriter';
 import { ProtoDeserializer, ScarlarDeserializerCompiler } from './ProtoDeserializer';
@@ -113,7 +112,6 @@ export class ProtoMessage<const T extends ProtoModel> {
                     spec.fieldNumber,
                     ScarlarDeserializerCompiler[type](
                         key,
-                        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
                         // @ts-ignore
                         spec
                     )
@@ -145,7 +143,6 @@ export class ProtoMessage<const T extends ProtoModel> {
             }
             const serializer = this.fieldSerializers.get(key)!;
             serializer(
-                // eslint-disable-next-line @typescript-eslint/ban-ts-comment
                 // @ts-ignore
                 value,
                 writer,
