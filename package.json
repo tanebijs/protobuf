@@ -1,18 +1,24 @@
 {
   "name": "@tanebijs/protobuf",
-  "version": "0.0.0",
-  "private": true,
-  "description": "Protobuf infrastructure for tanebi",
+  "version": "0.0.1",
+  "description": "Fast Protobuf infrastructure for tanebi",
   "type": "module",
-  "main": "src/index.ts",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tanebijs/protobuf.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsup",
+    "prepack": "npm run build"
+  },
+  "keywords": ["protobuf"],
+  "author": "Young",
+  "license": "MIT",
   "devDependencies": {
-    "tsup": "^8.4.0"
+    "@types/node": "^20.17.30",
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.3"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
